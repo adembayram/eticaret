@@ -19,6 +19,16 @@ Bu proje, Laravel framework'ü ile yazılmış basit bir e-ticaret sitesidir. Gi
 6. Konsol ekranında `php artisan key:generate` komutunu çalıştırın.
 7. Projenizi çalıştırmak için `php artisan serve` komutunu kullanın.
 
+## Uyarı
+
+Proje çalıştırıldığında hata alıyorsanız, `App/Providers/AppServiceProvider.php` dosyası içerisinde bulunan aşağıdaki satırları yorum satırından çıkartmayı unutmayın:
+
+```php
+$settings = Setting::first();
+$menus = Menu::all();
+view()->share(compact('settings', 'menus'));
+
+
 ## Bölümler
 
 Proje aşağıdaki bölümleri içermektedir:
