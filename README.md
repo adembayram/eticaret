@@ -27,7 +27,7 @@ Proje çalıştırıldığında hata alıyorsanız, `App/Providers/AppServicePro
 $settings = Setting::first();
 $menus = Menu::all();
 view()->share(compact('settings', 'menus'));
-```php
+```
 
 ## Bölümler
 
